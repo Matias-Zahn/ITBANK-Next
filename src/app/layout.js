@@ -12,10 +12,12 @@ export default function RootLayout({ children }) {
         <title>ITBANK</title>
       </head>
       <body>
-        <Header />
-        <Sidebar />
-        <main>{children}</main>
-        <Footer />
+        <div className="container">
+          <Header />
+          <Sidebar />
+          <main className="main">{children}</main>
+          <Footer />
+        </div>
       </body>
     </html>
   );

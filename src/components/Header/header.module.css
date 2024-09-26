@@ -1,0 +1,23 @@
+.header {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ededed;
+}
+
+/*-->Nombre de la pagina*/
+.container {
+  width: 100%;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  grid-column: 1;
+}
+
+.ionicon {
+  min-width: 50px;
+  font-size: 30px;
+  cursor: pointer;
+  height: 30px;
+}

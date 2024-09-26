@@ -1,0 +1,16 @@
+.footer {
+  background-color: #ededed;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  text-decoration: none;
+  grid-column: 1 / span 2;
+}
+.a {
+  text-decoration: none;
+  color: #000000;
+}
