@@ -3,18 +3,24 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import style from './sidebar.module.css';
+import {
+  IconBuildingBank,
+  IconCreditCardPay,
+  IconTransfer,
+  IconTransformFilled,
+  IconUserCircle,
+} from '@tabler/icons-react';
 
 function Sidebar({ sidebarOpen, setSidebarOpen }) {
-  const location = usePathname();
+  const currentLocation = usePathname();
 
-  const currentLocation = location.pathname;
   return (
     <div className={style.sidebar}>
       <nav className={style.navbar}>
         <ul>
           <li className={style.li}>
             <Link className={style.a} href="/cuenta">
-              {/* <AccountIcons /> */}
+              <IconUserCircle />
               <span
                 className={style.span}
                 style={{
@@ -27,8 +33,9 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
           </li>
           <li className={style.li}>
             <Link className={style.a} href="/transferencias">
-              {/* <TransfersIcons /> */}
+              <IconTransfer />
               <span
+                className={style.span}
                 style={{
                   color:
                     currentLocation === '/transferencias' ? '#6495ed' : 'black',
@@ -40,8 +47,9 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
           </li>
           <li className={style.li}>
             <Link className={style.a} href="/prestamos">
-              {/* <LoansIcons /> */}
+              <IconBuildingBank />
               <span
+                className={style.span}
                 style={{
                   color: currentLocation === '/prestamos' ? '#6495ed' : 'black',
                 }}
@@ -52,8 +60,9 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
           </li>
           <li className={style.li}>
             <Link className={style.a} href="/conversor">
-              {/* <ConverterIcons /> */}
+              <IconTransformFilled />
               <span
+                className={style.span}
                 style={{
                   color: currentLocation === '/conversor' ? '#6495ed' : 'black',
                 }}
@@ -64,13 +73,11 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
           </li>
           <li className={style.li}>
             <Link className={style.a} href="/servicios">
-              {/* <ConverterIcons /> */}
+              <IconCreditCardPay />
               <span
+                className={style.span}
                 style={{
-                  color:
-                    currentLocation === '/pagar-servicios'
-                      ? '#6495ed'
-                      : 'black',
+                  color: currentLocation === '/servicios' ? '#6495ed' : 'black',
                 }}
               >
                 Pago de servicios
