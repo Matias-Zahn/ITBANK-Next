@@ -18,14 +18,14 @@
     margin-bottom: 1.5rem;  
   }  
   
-  label {  
+  .label {  
     display: block;  
     margin-bottom: 0.5rem;  
     color: #555555;  
   }  
   
-  input[type="number"],  
-  select {  
+  .input[type="number"],  
+  .select {  
     width: 100%;  
     padding: 0.8rem;  
     border: 1px solid #cccccc;  
@@ -35,8 +35,8 @@
     transition: border-color 0.3s;  
   }  
   
-  input[type="number"]:focus,  
-  select:focus {  
+  .input[type="number"]:focus,  
+  .select:focus {  
     border-color: #176faa;  
     outline: none;  
   }  

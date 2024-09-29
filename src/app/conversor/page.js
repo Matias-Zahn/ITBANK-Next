@@ -1,6 +1,10 @@
-import Conversor from '../components/Conversor'; 
+import Conversor from '../../components/Conversor/Conversor';
 
-function Conversor() {
-  return <div>Conversor</div>;
+function ConversorPage() {
+  return (
+    <div> 
+      <h1>Conversor</h1>
+      <Conversor />
+  </div>);
 }
-export default Conversor;
+export default ConversorPage;

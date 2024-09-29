@@ -1,5 +1,4 @@
-import { Footer } from "../components/Footer";  
-import { Header, Sidebar } from "../components/index";  
+"use client"; 
 import { useState, useEffect } from 'react';  
 import './conversor.module.css'; 
 
@@ -43,13 +42,12 @@ const Conversor = () => {
 
   return (  
     <div>  
-      <Header />  
-      <Sidebar /> 
       <h2>Conversor de Divisas</h2>  
 
       <div>  
-        <label>Cantidad a convertir: </label>  
+        <label className="label">Cantidad a convertir: </label>  
         <input  
+          className="input"
           type="number"  
           value={saldo}  
           onChange={manejarCambioSaldo}  
@@ -63,8 +61,9 @@ const Conversor = () => {
       </div>  
 
       <div>  
-        <label>Convertir de: </label>  
-        <select  
+        <label className="label">Convertir de: </label>  
+        <select 
+          className="select" 
           value={monedaOrigen}  
           onChange={(e) => setMonedaOrigen(e.target.value)}  
         >  
@@ -77,7 +76,7 @@ const Conversor = () => {
       </div>  
 
       <div>  
-        <label>Convertir a: </label>  
+        <label className="label">Convertir a: </label>  
         <select  
           value={monedaDestino}  
           onChange={(e) => setMonedaDestino(e.target.value)}  
@@ -95,8 +94,7 @@ const Conversor = () => {
           Saldo convertido: {saldoConvertido}{' '}  
           {opcionesMoneda.find((opt) => opt.codigo === monedaDestino)?.nombre}  
         </h3>  
-      </div>  
-      <Footer /> 
+      </div> 
     </div>  
   );  
 }  
