@@ -1,6 +1,6 @@
 "use client"; 
 import { useState, useEffect } from 'react';  
-import './conversor.module.css'; 
+import style from './conversor.module.css'; 
 
 const Conversor = () => {  
   const [monedaOrigen, setMonedaOrigen] = useState('ARS');  
@@ -45,9 +45,9 @@ const Conversor = () => {
       <h2>Conversor de Divisas</h2>  
 
       <div>  
-        <label className="label">Cantidad a convertir: </label>  
+        <label className={style.label}>Cantidad a convertir: </label>  
         <input  
-          className="input"
+          className={style.input}
           type="number"  
           value={saldo}  
           onChange={manejarCambioSaldo}  
@@ -61,9 +61,9 @@ const Conversor = () => {
       </div>  
 
       <div>  
-        <label className="label">Convertir de: </label>  
+        <label className={style.label}>Convertir de: </label>  
         <select 
-          className="select" 
+          className={style.select} 
           value={monedaOrigen}  
           onChange={(e) => setMonedaOrigen(e.target.value)}  
         >  
@@ -76,8 +76,9 @@ const Conversor = () => {
       </div>  
 
       <div>  
-        <label className="label">Convertir a: </label>  
+        <label className={style.label}>Convertir a: </label>  
         <select  
+          className={style.select} 
           value={monedaDestino}  
           onChange={(e) => setMonedaDestino(e.target.value)}  
         >  
