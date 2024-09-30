@@ -1,4 +1,12 @@
-function Prestamos() {
-  return <div>Prestamos</div>;
+import Prestamos from '../../components/Prestamos/Prestamos';
+
+function PrestamosPage() {
+  return (
+    <div>
+      <h1>Préstamos</h1>
+      <Prestamos />
+    </div>
+  );
 }
-export default Prestamos;
+
+export default PrestamosPage;
