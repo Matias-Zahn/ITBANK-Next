@@ -1,0 +1,25 @@
+{
+    "transfer_history": [
+        {
+          "from": "Juan Pérez",
+          "to": "Ana Gómez",
+          "amount": 1000,
+          "date": "2024-09-25",
+          "status": "completed"
+        },
+        {
+          "from": "Ana Gómez",
+          "to": "Luis Martínez",
+          "amount": 500,
+          "date": "2024-09-26",
+          "status": "completed"
+        },
+        {
+          "from": "Luis Martínez",
+          "to": "Sofía Rodríguez",
+          "amount": 1500,
+          "date": "2024-09-27",
+          "status": "pending"
+        }
+      ]
+}

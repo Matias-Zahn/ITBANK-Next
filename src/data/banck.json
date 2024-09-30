@@ -1,0 +1,52 @@
+{
+    "users": [
+    {
+      "id": 1,
+      "pass": "pass123",
+      "DNI": "12344678",
+      "user": "user123",
+      "saldo": 4900,
+      "name": "Juan Pérez",
+      "cbu": "1234567890123456789012",
+      "alias": "juan.perez",
+      "balance": 5000,
+      "bank": "Banco Digital"
+    },
+    {
+      "id": 2,
+      "pass": "pass123",
+      "DNI": "87654321",
+      "user": "user124",
+      "saldo": 4900,
+      "name": "Ana Gómez",
+      "cbu": "9876543210987654321098",
+      "alias": "ana.gomez",
+      "balance": 3000,
+      "bank": "Banco Digital"
+    },
+    {
+      "id": 3,
+      "pass": "pass123",
+      "DNI": "11223344",
+      "user": "user125",
+      "saldo": 4900,
+      "name": "Luis Martínez",
+      "cbu": "1357924680135792468013",
+      "alias": "luis.martinez",
+      "balance": 10000,
+      "bank": "Banco Digital"
+    },
+    {
+      "id": 4,
+      "pass": "pass123",
+      "DNI": "22334455",
+      "user": "user126",
+      "saldo": 4900,
+      "name": "Sofía Rodríguez",
+      "cbu": "2468135790246813579024",
+      "alias": "sofia.rodriguez",
+      "balance": 2500,
+      "bank": "Otro Banco"
+    }]
+  }
+  
