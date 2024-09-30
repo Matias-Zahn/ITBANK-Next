@@ -8,10 +8,10 @@ function Transferir() {
   const [mensaje, setMensaje] = useState('');
 
   const manejarTransferencia = () => {
-    // Aquí puedes implementar la lógica para realizar la transferencia
+    //  implementar la lógica para realizar la transferencia
     if (alias && monto) {
       setMensaje(`Transferencia de $${monto} a ${alias} realizada.`);
-      // Lógica adicional para actualizar el balance, etc.
+      // Lógica adicional para actualizar el balance en jsonn, etc.
     } else {
       setMensaje('Por favor, completa todos los campos.');
     }

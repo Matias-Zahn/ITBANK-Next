@@ -17,7 +17,7 @@ function PagoServicios() {
   ];
 
   const manejarPago = () => {
-    // Lógica para calcular el monto según el servicio
+    // Lógica para calcular el monto según el servicio //se debe sacar del sjson
     if (servicio && codigoBarras && cuit) {
       // Simulación de cálculo de monto (esto debería ser reemplazado por la lógica real)
       const montoCalculado = Math.floor(Math.random() * 1000) + 100; // Monto aleatorio entre 100 y 1100
