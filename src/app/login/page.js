@@ -1,12 +1,15 @@
-import {LoginForm} from '../components/Login'; 
+'use client';
 
-function Login() {  
-  return (  
-    <div>  
-      <h1>Login</h1>  
-      <LoginForm />  
-    </div>  
-  );  
-}  
+import { useRouter } from 'next/router';
+import { LoginForm } from '../../components/index';
 
-export default Login;  
+function Login() {
+  return (
+    <div>
+      <h1>Login</h1>
+      <LoginForm />
+    </div>
+  );
+}
+
+export default Login;
