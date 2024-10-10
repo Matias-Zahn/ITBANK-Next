@@ -1,0 +1,41 @@
+.content {
+  display: grid;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.content_items {
+  display: grid;
+  gap: 2rem;
+}
+
+.content_items_card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.card {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 1rem;
+  padding: 2rem;
+
+  .card-content {
+    display: grid;
+    gap: 5px;
+  }
+  .card_content_items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .cbu {
+    color: #6495ed;
+  }
+}

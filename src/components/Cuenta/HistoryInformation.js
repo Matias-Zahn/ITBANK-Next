@@ -1,65 +1,58 @@
 // eslint-disable-next-line react/prop-types
-function HistoryInformation({ setShowMore }) {
-    const handleModal = () => {
-      setShowMore(false);
-    };
-  
-    return (
-      <div
-        style={{
-          backgroundColor: "white",
-          padding: "2rem",
-          border: "1px solid black",
-          borderRadius: "2rem",
-          height: "-100px",
-          marginTop: "1rem",
-        }}
-      >
-        <div
-          style={{
-            position: "relative",
-            display: "grid",
-            justifyContent: "center",
-          }}
-        >
-          <button
-            style={{
-              position: "absolute",
-              top: "-30px",
-              right: "0",
-              width: "45px",
-              borderRadius: "100%",
-              backgroundColor: "red",
-            }}
-            onClick={handleModal}
-          >
-            X
-          </button>
-          <h4 style={{ fontSize: "24px" }}> Alberto Mansilla</h4>
-          <p style={{ fontSize: "18px", textAlign: "center", color: "green" }}>
-            + $14.000,00
-          </p>
+
+import style from './HistoryInformation.module.css';
+
+function HistoryInformation({
+  setShowMore,
+  name,
+  status,
+  date,
+  from,
+  to,
+  amount,
+}) {
+  const handleModal = () => {
+    setShowMore(false);
+  };
+
+  const statusInfo = () => {
+    if (status == 'completed') {
+      return 'Recibida';
+    } else if (status == 'pending') {
+      return 'Pendiente';
+    }
+
+    return 'Rechazada';
+  };
+
+  return (
+    <div className={style.content}>
+      <div className={style.content_relative}>
+        <h4 className={style.name}>{to}</h4>
+        <p style={{ fontSize: '18px', textAlign: 'center', color: 'green' }}>
+          + ${amount}
+        </p>
+      </div>
+
+      <div className={style.amount}>
+        <div className={style.amount_info}>
+          <p>Operacion: </p>
+          <p>Transferencia</p>
         </div>
-  
-        <div style={{ display: "grid", gap: "7px" }}>
-          <div style={{ display: "flex", justifyContent: "space-between" }}>
-            <p>Operacion: </p>
-            <p>Transferencia</p>
-          </div>
-          <div style={{ display: "flex", justifyContent: "space-between" }}>
-            <p>Tipo: </p>
-            <p>Recibida</p>
-          </div>
-          <div style={{ display: "flex", justifyContent: "space-between" }}>
-            <p>Origen: </p>
-            <p>ITBANK</p>
-          </div>
-          <div style={{ display: "flex", justifyContent: "space-between" }}>
-            <p>Fecha: </p>
-            <p>14/09/2024</p>
-          </div>
+        <div className={style.amount_info}>
+          <p>Tipo: </p>
+          <p>{statusInfo()}</p>
+        </div>
+        <div className={style.amount_info}>
+          <p>Origen: </p>
+          <p>ITBANK</p>
+        </div>
+        <div className={style.amount_info}>
+          <p>Fecha: </p>
+          <p>{date}</p>
         </div>
       </div>
-    );
-  }
-  export default HistoryInformation;
+    </div>
+  );
+}
+export default HistoryInformation;

@@ -1,5 +1,5 @@
-{
-    "users": [
+[
+
     {
       "id": 1,
       "pass": "pass123",
@@ -47,6 +47,6 @@
       "alias": "sofia.rodriguez",
       "balance": 2500,
       "bank": "Otro Banco"
-    }]
-  }
+    }
+    ]
   

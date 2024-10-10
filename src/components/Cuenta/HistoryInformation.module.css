@@ -1,0 +1,38 @@
+.content {
+  background-color: white;
+  padding: 2rem;
+  border: 1px solid black;
+  border-radius: 2rem;
+  height: -100px;
+  margin-top: 1rem;
+}
+
+.content_relative {
+  position: relative;
+  display: grid;
+  justify-content: 'center';
+}
+
+.buttom {
+  position: absolute;
+  top: -10px;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  background-color: red;
+}
+
+.name {
+  font-size: 24px;
+  text-align: center;
+}
+
+.amount {
+  display: grid;
+  gap: 7px;
+}
+
+.amount_info {
+  display: flex;
+  justify-content: space-between;
+}
