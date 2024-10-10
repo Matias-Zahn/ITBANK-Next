@@ -2,7 +2,6 @@
 function HistoryInformation({ setShowMore }) {
     const handleModal = () => {
       setShowMore(false);
-      console.log("cerrando");
     };
   
     return (
