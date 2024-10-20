@@ -4,8 +4,12 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import style from './login.module.css';
 import { useRouter } from 'next/navigation';
+import { useGlobalState } from '@/context/Context';
 
 const LoginForm = () => {
+
+  const { user, setUser } = useGlobalState()
+
   const [formData, setFormData] = useState({
     dni: '',
     usuario: '',
@@ -18,14 +22,14 @@ const LoginForm = () => {
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
-    setFormData({
-      ...formData,
+    setUser({
+      ...user,
       [name]: type === 'checkbox' ? checked : value,
     });
   };
 
   const validateForm = () => {
-    const { dni, usuario, clave } = formData;
+    const { dni, usuario, clave } = user;
     if (!dni || !usuario || !clave) {
       setError('Todos los campos son obligatorios');
       return false;
@@ -37,10 +41,11 @@ const LoginForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validateForm()) {
-      console.log('Form Data:', formData);
       router.push('/cuenta');
+      localStorage.setItem("user", JSON.stringify(user))
     }
   };
+
 
   return (
     <div className={style.body__login}>
@@ -71,7 +76,7 @@ const LoginForm = () => {
                 id="dni"
                 name="dni"
                 placeholder="Ingresa tu DNI"
-                value={formData.dni}
+                value={user.dni}
                 onChange={handleChange}
                 required
               />
@@ -89,7 +94,7 @@ const LoginForm = () => {
                 id="usuario"
                 name="usuario"
                 placeholder="Ingresa tu usuario"
-                value={formData.usuario}
+                value={user.usuario}
                 onChange={handleChange}
                 required
               />
@@ -107,7 +112,7 @@ const LoginForm = () => {
                 id="clave"
                 name="clave"
                 placeholder="Tu clave"
-                value={formData.clave}
+                value={user.clave}
                 onChange={handleChange}
                 required
               />
@@ -120,7 +125,7 @@ const LoginForm = () => {
                 type="checkbox"
                 id="recordar"
                 name="recordar"
-                checked={formData.recordar}
+                checked={user.recordar}
                 onChange={handleChange}
               />
               <label

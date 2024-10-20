@@ -1,6 +1,5 @@
 'use client';
 
-import { useRouter } from 'next/router';
 import { LoginForm } from '../../components/index';
 
 function Login() {

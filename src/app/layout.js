@@ -1,3 +1,4 @@
+import { GlobalStateProvider } from '@/context/Context';
 import { Footer, Header, Sidebar } from '../components/index';
 import './layout.css';
 
@@ -16,12 +17,14 @@ export default function RootLayout({ children }) {
         <title>ITBANK</title>
       </head>
       <body>
+        <GlobalStateProvider>
         <Header />
         <div className="container">
           <Sidebar />
           <main className="main">{children}</main>
           <Footer />
         </div>
+        </GlobalStateProvider>
       </body>
     </html>
   );

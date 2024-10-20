@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import style from "./Prestamos.module.css";
+import style from "./prestamos.module.css";
 
 const Prestamos = () => {
   const [capital, setCapital] = useState('');
