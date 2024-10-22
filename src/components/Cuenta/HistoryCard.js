@@ -12,6 +12,7 @@ function HistoryCard() {
     setShowMore(!showMore);
   };
   return (
+    //! ARREGLAR EL MANEJO DEL ESTADOOOOOOOOOOOOOOOOOOOOOOOOOOO
     <>
       {data.map((user) => (
         <div key={user.id}>
